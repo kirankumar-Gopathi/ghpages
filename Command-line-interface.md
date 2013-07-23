@@ -22,7 +22,7 @@ Such as:
 
 The command line utility has several options. You can view the options by running `eslint -h`.
 
-{% highlight eslint %}
+{% highlight javascript %}
 eslint [options] file.js [file.js] [dir]
 
 Options:

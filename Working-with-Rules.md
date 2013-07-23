@@ -6,7 +6,7 @@ layout: default
 
 Each ESLint rule has two files: a source file in the `lib/rules` directory and a test file in the `tests/lib/rules` directory. Both files should be named with the rule ID (i.e., `no-eval.js` for rule ID `no-eval`) The basic source code format for a rule is:
 
-{% highlight eslint %}
+{% highlight javascript %}
 /**
  * @fileoverview Rule to flag use of an empty block statement
  * @author Nicholas C. Zakas
@@ -29,7 +29,7 @@ module.exports = function(context) {
 
 Each rule is represented by a single object with several properties. The properties are equivalent to AST node types from [SpiderMonkey](https://developer.mozilla.org/en-US/docs/SpiderMonkey/Parser_API). For example, if your rule wants to know when an identifier is found in the AST, then add a method called "Identifier", such as:
 
-{% highlight eslint %}
+{% highlight javascript %}
 module.exports = function(context) {
 
     return {
@@ -54,7 +54,7 @@ The node contains all of the information necessary to figure out the line and co
 
 If your rule needs to get the actual JavaScript source to work with, then use the `context.getSource()` method. This method works as follows:
 
-{% highlight eslint %}
+{% highlight javascript %}
 
 // get all source
 var source = context.getSource();
@@ -82,7 +82,7 @@ For your rule, be sure to test:
 
 The basic pattern for a rule unit test file is:
 
-{% highlight eslint %}
+{% highlight javascript %}
 /**
  * @fileoverview Tests for no-with rule.
  * @author Nicholas C. Zakas

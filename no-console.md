@@ -6,7 +6,7 @@ layout: default
 
 In JavaScript that is designed to be executed in the browser, it's considered a best practice to avoid using methods on `console`. Such messages are considered to be for debugging purposes and therefore not suitable to ship to the client. In general, calls using `console` should be stripped before being pushed to production.
 
-{% highlight eslint %}
+{% highlight javascript %}
 console.log("Made it here.");
 console.error("That shouldn't have happened.");
 {% endhighlight %}
@@ -18,14 +18,14 @@ This rule is aimed at eliminating unwanted `console` references from your JavaSc
 
 The following patterns are considered warnings:
 
-{% highlight eslint %}
+{% highlight javascript %}
 console.log("Hello world!");
 console.error("Something bad happened.");
 {% endhighlight %}
 
 The following patterns are considered okay and do not cause warnings:
 
-{% highlight eslint %}
+{% highlight javascript %}
 // custom console
 Console.log("Hello world!");
 {% endhighlight %}

@@ -12,7 +12,7 @@ This rule is aimed at eliminating `arguments.caller` and `arguments.callee` from
 
 The following patterns are considered warnings:
 
-{% highlight eslint %}
+{% highlight javascript %}
 function findCallingFunction() {
     return arguments.caller;
 }
@@ -24,7 +24,7 @@ function recurseInfinitely() {
 
 The following patterns are considered okay and do not cause warnings:
 
-{% highlight eslint %}
+{% highlight javascript %}
 // custom arguments
 Arguments.callee();
 {% endhighlight %}

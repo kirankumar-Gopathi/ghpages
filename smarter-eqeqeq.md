@@ -9,7 +9,7 @@ or you're doing a `typeof` comparison. For those types of comparisons using stri
 
 The following patterns are considered okay and do not cause warnings:
 
-{% highlight eslint %}
+{% highlight javascript %}
 typeof foo == 'undefined'
 'hello' != 'world'
 0 == 0
@@ -18,7 +18,7 @@ true == true
 
 The following patterns are considered warnings:
 
-{% highlight eslint %}
+{% highlight javascript %}
 a == b
 foo == true
 bananas != 1

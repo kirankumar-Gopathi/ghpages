@@ -6,7 +6,7 @@ layout: default
 
 One true brace style is a common coding style in JavaScript, in which the opening curly brace of a block is placed on the same line as its corresponding statement or declaration.
 
-{% highlight eslint %}
+{% highlight javascript %}
 function foo()
 {
   return true;
@@ -24,7 +24,7 @@ This rule is aimed at enforcing one true brace style across your JavaScript. As 
 
 The following patterns are considered warnings:
 
-{% highlight eslint %}
+{% highlight javascript %}
 function foo()
 {
   return true;
@@ -46,7 +46,7 @@ try
 
 The following patterns adhere to one true brace style and do not cause warnings:
 
-{% highlight eslint %}
+{% highlight javascript %}
 function foo() {
   return true;
 }

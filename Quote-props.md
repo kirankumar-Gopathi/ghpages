@@ -8,7 +8,7 @@ Similar to how quoting attribute values in HTML is a good idea, quoting property
 
 Ensuring property names in object literals are always wrapped in quotes is generally a good idea, since [depending on the property name you may need to quote them anyway](http://mathiasbynens.be/notes/javascript-properties). Consider this example:
 
-{% highlight eslint %}
+{% highlight javascript %}
 var object = {
     foo: "bar",
     baz: 42,
@@ -18,7 +18,7 @@ var object = {
 
 Here, the properties `foo` and `baz` are not wrapped in quotes, but `qux-lorem` is, because it doesn’t work without the quotes. This is rather inconsistent. Instead, you may prefer to quote property names consistently:
 
-{% highlight eslint %}
+{% highlight javascript %}
 var object = {
     "foo": "bar",
     "baz": 42,
@@ -28,7 +28,7 @@ var object = {
 
 …or, if you prefer single quotes:
 
-{% highlight eslint %}
+{% highlight javascript %}
 var object = {
     'foo': 'bar',
     'baz': 42,
@@ -38,7 +38,7 @@ var object = {
 
 Much better, no? If that didn’t convince you, here’s another example:
 
-{% highlight eslint %}
+{% highlight javascript %}
 var object = {
     1e2: 1,
     100: 2
@@ -53,7 +53,7 @@ This rule helps you enforce consistent quoting of property names.
 
 The following patterns are considered warnings:
 
-{% highlight eslint %}
+{% highlight javascript %}
 var object = {
     foo: "bar",
     baz: 42,
@@ -63,7 +63,7 @@ var object = {
 
 The following patterns are considered okay and do not cause warnings:
 
-{% highlight eslint %}
+{% highlight javascript %}
 var object = {
     "foo": "bar",
     "baz": 42,
@@ -71,7 +71,7 @@ var object = {
 };
 {% endhighlight %}
 
-{% highlight eslint %}
+{% highlight javascript %}
 var object = {
     'foo': 'bar',
     'baz': 42,

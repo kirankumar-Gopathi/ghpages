@@ -12,7 +12,7 @@ This rule is aimed at eliminating empty statements. While not technically an err
 
 The following patterns are considered warnings:
 
-{% highlight eslint %}
+{% highlight javascript %}
 if (foo) {
 }
 
